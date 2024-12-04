@@ -20,17 +20,17 @@
 
 @keyframes fpc-animation {
     0% {
-        background: url('assets/images/spc.jpeg') center/cover;
+        background: url('../images/spc.jpeg') center/cover;
 
     }
 
     50% {
-        background: url('assets/images/SPC-Flooring.jpg') center/cover;
+        background: url('../images/SPC-Flooring.jpg') center/cover;
 
     }
 
     100% {
-        background: url('assets/images/SPCFlooring.jpeg') center/cover;
+        background: url('../images/SPCFlooring.jpeg') center/cover;
 
     }
 
@@ -40,7 +40,7 @@
 @keyframes scale-animation {
     0% {
         transform: scale(0);
-        opacity: 0;
+        opacity: 0.8;
 
 
     }
@@ -165,6 +165,7 @@ header nav {
 
     .hero-details {
         max-width: 700px;
+
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -349,7 +350,7 @@ main {
             flex: 1 500px;
             height: 50vh;
             filter: saturate(0);
-            background: url('assets/images/spc.jpeg') center/cover;
+            background: url('../images/spc.jpeg') center/cover;
             animation: fpc-animation 6s infinite;
         }
 
@@ -503,4 +504,33 @@ footer p {
     footer .footer-section {
         text-align: center;
     }
+
+    .hero-container {
+
+        .hero-details {
+
+            gap: 30px;
+
+            padding: 70px 20px;
+
+            .hero-title {
+                font: 600 2rem / 2rem "Open Sans", sans-serif;
+                height: 70px;
+
+            }
+
+            .hero-description {
+                font: 100 1.2rem / 2rem "Open Sans", sans-serif;
+                height: 200px;
+
+
+            }
+
+            button {
+                z-index: 1;
+            }
+        }
+    }
+
+
 }
