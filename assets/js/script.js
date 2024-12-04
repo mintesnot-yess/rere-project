@@ -71,7 +71,7 @@ setInterval(function () {
     url("${ContDetais.images[currentIndex]}")
   center/cover fixed`;
 
-}, 3000);
+}, 3500);
 
 
 
