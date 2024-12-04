@@ -20,17 +20,17 @@
 
 @keyframes fpc-animation {
     0% {
-        background: url('./images/spc.jpeg') center/cover;
+        background: url('../images/spc.jpeg') center/cover;
 
     }
 
     50% {
-        background: url('./images/SPC-Flooring.jpg') center/cover;
+        background: url('../images/SPC-Flooring.jpg') center/cover;
 
     }
 
     100% {
-        background: url('./images/SPCFlooring.jpeg') center/cover;
+        background: url('../images/SPCFlooring.jpeg') center/cover;
 
     }
 
@@ -427,7 +427,7 @@ main {
 
 
 footer {
-    background: linear-gradient(#000000, #0000008c), url("./images/flooring-3.jpg") center/cover fixed;
+    background: linear-gradient(#000000, #0000008c), url("../images/flooring-3.jpg") center/cover fixed;
     color: #fff;
     padding: 20px 0;
     display: flex;
