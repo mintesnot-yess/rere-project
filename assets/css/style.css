@@ -20,17 +20,17 @@
 
 @keyframes fpc-animation {
     0% {
-        background: url('../images/spc.jpeg') center/cover;
+        background: url('./images/spc.jpeg') center/cover;
 
     }
 
     50% {
-        background: url('../images/SPC-Flooring.jpg') center/cover;
+        background: url('./images/SPC-Flooring.jpg') center/cover;
 
     }
 
     100% {
-        background: url('../images/SPCFlooring.jpeg') center/cover;
+        background: url('./images/SPCFlooring.jpeg') center/cover;
 
     }
 
@@ -118,6 +118,8 @@ header nav {
     ul {
         display: flex;
         gap: 10px;
+        flex-direction: row;
+
         justify-content: space-around;
         align-items: center;
 
@@ -145,6 +147,10 @@ header nav {
             }
         }
 
+    }
+
+    .bar {
+        display: none;
     }
 
     img {
@@ -296,7 +302,6 @@ main {
     .sub-cont {}
 
     .wcu {
-        height: 100vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -350,7 +355,6 @@ main {
             flex: 1 500px;
             height: 50vh;
             filter: saturate(0);
-            background: url('../images/spc.jpeg') center/cover;
             animation: fpc-animation 6s infinite;
         }
 
@@ -423,7 +427,7 @@ main {
 
 
 footer {
-    background: linear-gradient(#000000, #0000008c), url("assets/images/flooring-3.jpg") center/cover fixed;
+    background: linear-gradient(#000000, #0000008c), url("./images/flooring-3.jpg") center/cover fixed;
     color: #fff;
     padding: 20px 0;
     display: flex;
@@ -491,7 +495,93 @@ footer p {
 
 }
 
+@keyframes menu-animation {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+        z-index: 1;
+    }
+
+}
+
 @media (max-width: 768px) {
+    header nav {
+        .logo {
+            z-index: 2;
+        }
+
+        .bar {
+            display: block;
+            z-index: 3;
+
+
+            button {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+                background: transparent;
+                border: none;
+                color: var(--white-color-1);
+                border-radius: 50%;
+                cursor: pointer;
+
+                &:hover {
+                    background: var(--black-50-color);
+
+                }
+            }
+
+        }
+
+
+
+
+
+
+        .menu {
+            animation: menu-animation .4s;
+            display: none;
+            top: 55px;
+            width: 100%;
+            position: fixed;
+            flex-direction: column;
+            gap: 0;
+            background: var(--black-50-color);
+            backdrop-filter: blur(10px);
+
+
+
+
+            li {
+                width: 100%;
+
+                text-align: center;
+
+
+
+
+
+
+                a {
+                    width: 100%;
+
+
+
+                }
+            }
+
+        }
+
+        img {
+            width: 120px;
+            object-fit: cover;
+
+
+        }
+
+
+    }
+
     main {
         height: fit-content;
     }
@@ -530,6 +620,12 @@ footer p {
                 z-index: 1;
             }
         }
+    }
+
+    .addbg {
+
+        height: fit-content;
+
     }
 
 

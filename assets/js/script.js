@@ -2,6 +2,8 @@
 var currentIndex = 0;
 let HeroCont = document.querySelector(".hero-container");
 let addbg = document.querySelector(".addbg");
+let NavigationBar = document.querySelector(".nav");
+
 
 
 let HeroTitle = document.querySelector(".hero-title");
@@ -73,3 +75,33 @@ setInterval(function () {
 
 
 
+
+
+
+let NavMenu = document.querySelector(".menu");
+
+let barMenuBTN = document.querySelector("#bars");
+
+
+barMenuBTN.addEventListener("click", () => {
+    if (NavMenu.style.display === "flex") {
+        barMenuBTN.classList.remove("fa-times");
+        barMenuBTN.classList.add("fa-bars");
+        NavMenu.style.transform = "translateY(-100%)";
+        NavMenu.style.opacity = "0";
+
+
+        setTimeout(() => {
+            NavMenu.style.display = "none";
+        }, 300);
+    } else {
+        NavMenu.style.display = "flex";
+        NavMenu.style.transform = "translateY(0%)";
+
+        barMenuBTN.classList.add("fa-times");
+        barMenuBTN.classList.remove("fa-bars");
+
+
+        NavMenu.style.opacity = "1";
+    }
+});
